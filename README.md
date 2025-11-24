@@ -220,10 +220,3 @@ MIT Lisansı.
 
 ```
 
----
-
-💙 **Hazır!**  
-README artık projenin içinde, tek parça, kopmayan, profesyonel bir şekilde duruyor.
-
-Ekran görüntüleri eklersen, README’yi daha da premium hale getirebilirim.
-```
