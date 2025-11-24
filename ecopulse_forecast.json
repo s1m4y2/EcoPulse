@@ -1,0 +1,147 @@
+﻿{
+  "id": null,
+  "uid": "ecopulse-forecast",
+  "title": "EcoPulse – Forecast & Alerts",
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "30s",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "⚡ Energy Forecast (kWh)",
+      "targets": [
+        {
+          "expr": "ecopulse_energy_forecast_value",
+          "legendFormat": "{{building}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "unit": "kwatth"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "💧 Water Forecast (m³)",
+      "targets": [
+        {
+          "expr": "ecopulse_water_forecast_value",
+          "legendFormat": "{{building}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "unit": "m3"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      }
+    },
+    {
+      "type": "gauge",
+      "title": "⚠️ Energy Alert",
+      "targets": [
+        { "expr": "ecopulse_energy_alert" }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "max": 1,
+          "min": 0
+        }
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 12,
+        "h": 6
+      }
+    },
+    {
+      "type": "gauge",
+      "title": "💧 Water Alert",
+      "targets": [
+        { "expr": "ecopulse_water_alert" }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 1
+              }
+            ]
+          },
+          "max": 1,
+          "min": 0
+        }
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 8,
+        "w": 12,
+        "h": 6
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "📈 Model Accuracy (MAPE %)",
+      "targets": [
+        {
+          "expr": "ecopulse_model_mape{metric='energy'}",
+          "legendFormat": "Energy MAPE"
+        },
+        {
+          "expr": "ecopulse_model_mape{metric='water'}",
+          "legendFormat": "Water MAPE"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "color": { "mode": "continuous-BlPu" }
+        }
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 15,
+        "w": 24,
+        "h": 6
+      }
+    }
+  ]
+}

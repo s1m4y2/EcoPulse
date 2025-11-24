@@ -1,0 +1,27 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Publish output
+/app/publish/
+
+# Logs & temp
+*.log
+*.tmp
+
+# ENV FILES (SECRET!)
+.env
+
+# Large raw data files (not for GitHub)
+EcoPulse.Ingestor/Data/

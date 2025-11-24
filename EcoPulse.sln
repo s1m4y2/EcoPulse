@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoPulse.Common", "EcoPulse.Common\EcoPulse.Common.csproj", "{CEA0A1EE-D4AA-49B4-8DE9-4E3D10A14FC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoPulse.Api", "EcoPulse.Api\EcoPulse.Api.csproj", "{7D0EF6F9-7252-43CB-B0ED-D7F21CF53424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoPulse.Worker", "EcoPulse.Worker\EcoPulse.Worker.csproj", "{A9FBE16C-D7C1-4FA7-9C6C-FD409ED1C274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoPulse.Ingestor", "EcoPulse.Ingestor\EcoPulse.Ingestor.csproj", "{5ED9F4BD-5DC9-4564-AB02-6269DD0E4093}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		.gitignore = .gitignore
+		dashboards.yml = dashboards.yml
+		docker-compose.yml = docker-compose.yml
+		prometheus.yml = prometheus.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "grafana-provisioning", "grafana-provisioning", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dashboards", "dashboards", "{AA0E8C35-CE2B-40A6-9E25-63E3E8F013D2}"
+	ProjectSection(SolutionItems) = preProject
+		ecopulse-dashboard.json = ecopulse-dashboard.json
+		ecopulse_forecast.json = ecopulse_forecast.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "datasources", "datasources", "{BA110AD8-13E0-4399-92F5-037A669B4BB3}"
+	ProjectSection(SolutionItems) = preProject
+		datasource.yml = datasource.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoPulse.Analytics", "EcoPulse.Analytics\EcoPulse.Analytics.csproj", "{31D3AB83-63E1-4A0F-B70A-ACCEEA6F5BD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEA0A1EE-D4AA-49B4-8DE9-4E3D10A14FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA0A1EE-D4AA-49B4-8DE9-4E3D10A14FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA0A1EE-D4AA-49B4-8DE9-4E3D10A14FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA0A1EE-D4AA-49B4-8DE9-4E3D10A14FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D0EF6F9-7252-43CB-B0ED-D7F21CF53424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D0EF6F9-7252-43CB-B0ED-D7F21CF53424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D0EF6F9-7252-43CB-B0ED-D7F21CF53424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D0EF6F9-7252-43CB-B0ED-D7F21CF53424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9FBE16C-D7C1-4FA7-9C6C-FD409ED1C274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9FBE16C-D7C1-4FA7-9C6C-FD409ED1C274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9FBE16C-D7C1-4FA7-9C6C-FD409ED1C274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9FBE16C-D7C1-4FA7-9C6C-FD409ED1C274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED9F4BD-5DC9-4564-AB02-6269DD0E4093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED9F4BD-5DC9-4564-AB02-6269DD0E4093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED9F4BD-5DC9-4564-AB02-6269DD0E4093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED9F4BD-5DC9-4564-AB02-6269DD0E4093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D3AB83-63E1-4A0F-B70A-ACCEEA6F5BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D3AB83-63E1-4A0F-B70A-ACCEEA6F5BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D3AB83-63E1-4A0F-B70A-ACCEEA6F5BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D3AB83-63E1-4A0F-B70A-ACCEEA6F5BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA0E8C35-CE2B-40A6-9E25-63E3E8F013D2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{BA110AD8-13E0-4399-92F5-037A669B4BB3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3472BF8B-9BA8-4975-92D2-AB59F591E720}
+	EndGlobalSection
+EndGlobal

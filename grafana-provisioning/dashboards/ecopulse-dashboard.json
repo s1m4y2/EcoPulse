@@ -1,0 +1,43 @@
+{
+  "id": null,
+  "title": "EcoPulse Dashboard",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Energy Consumption (kWh)",
+      "targets": [
+        {
+          "expr": "sum(ecopulse_energy_kwh) by (building)",
+          "legendFormat": "{{building}}"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Water Consumption (m³)",
+      "targets": [
+        {
+          "expr": "sum(ecopulse_water_m3) by (building)",
+          "legendFormat": "{{building}}"
+        }
+      ]
+    },
+    {
+      "type": "graph",
+      "title": "Forecast Alerts",
+      "targets": [
+        {
+          "expr": "ecopulse_energy_alert",
+          "legendFormat": "Energy Alert ({{building}})"
+        },
+        {
+          "expr": "ecopulse_water_alert",
+          "legendFormat": "Water Alert ({{building}})"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 27,
+  "version": 2,
+  "editable": true
+}
